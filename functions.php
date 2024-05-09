@@ -27,6 +27,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 define( 'OCEANWP_THEME_DIR', get_template_directory() );
 define( 'OCEANWP_THEME_URI', get_template_directory_uri() );
 
+include ('custom-shortcode.php');
 /**
  * OceanWP theme class
  */
