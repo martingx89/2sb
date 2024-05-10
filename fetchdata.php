@@ -17,12 +17,17 @@ function get_routes_data($atts){
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
-        // output data of each row
+        // Output data of each row in a table format
+        echo '<table>';
+        echo '<tr><th>ID</th><th>Name</th><th>Description</th></tr>';
         while($row = $result->fetch_assoc()) {
-            echo '<script>';
-            echo 'console.log("ok")';
-            echo '</script>';
+            echo '<tr>';
+            echo '<td>' . $row['id'] . '</td>';
+            echo '<td>' . $row['name'] . '</td>';
+            echo '<td>' . $row['description'] . '</td>';
+            echo '</tr>';
         }
+        echo '</table>';
     } else {
         echo "0 results";
         echo '<script>';
