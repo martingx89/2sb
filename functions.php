@@ -28,6 +28,7 @@ define( 'OCEANWP_THEME_DIR', get_template_directory() );
 define( 'OCEANWP_THEME_URI', get_template_directory_uri() );
 
 include ('custom-shortcode.php');
+include ('fetchdata.php');
 /**
  * OceanWP theme class
  */
