@@ -19,12 +19,14 @@ function get_routes_data($atts){
     if ($result->num_rows > 0) {
         // output data of each row
         while($row = $result->fetch_assoc()) {
-          echo "<a href=''>".$row['btn_name']."</a>";
+            echo '<script>';
+            echo 'console.log("ok")';
+            echo '</script>';
         }
     } else {
         echo "0 results";
         echo '<script>';
-        echo 'console.log("Not working");';
+        echo 'console.log("nok")';
         echo '</script>';
     }
     $conn->close();
